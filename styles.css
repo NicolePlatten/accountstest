@@ -1117,3 +1117,118 @@ body:not(.home-v4) .calc-panel{border-color:rgba(174,129,97,.14);box-shadow:0 10
   .service-tile span .ui-icon{width:1.45rem;height:1.45rem;}
   .footer-logo img{width:132px!important;height:64px!important;}
 }
+
+
+/* ============================================================
+   v4.3 mobile hero composition — desktop intentionally unchanged
+   Nicole portrait sits beside the headline on phones.
+   ============================================================ */
+@media (max-width:520px){
+  .hero-luxe{
+    padding-top:1.15rem!important;
+    padding-bottom:1.55rem!important;
+  }
+  .hero-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(118px,36%)!important;
+    grid-template-rows:auto auto auto auto!important;
+    column-gap:.8rem!important;
+    row-gap:0!important;
+    align-items:start!important;
+  }
+  .hero-copy{
+    display:contents!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+  .hero-kicker{
+    grid-column:1 / -1!important;
+    grid-row:1!important;
+    margin:0 0 1.15rem!important;
+    max-width:none!important;
+  }
+  .hero-luxe h1{
+    grid-column:1!important;
+    grid-row:2!important;
+    align-self:center!important;
+    font-size:clamp(1.95rem,8.1vw,2.32rem)!important;
+    line-height:.98!important;
+    letter-spacing:-.035em!important;
+    margin:0!important;
+    max-width:none!important;
+  }
+  .hero-luxe h1 .line{
+    display:block!important;
+    white-space:nowrap!important;
+  }
+  .hero-visual{
+    grid-column:2!important;
+    grid-row:2!important;
+    align-self:center!important;
+    min-height:0!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+    display:flex!important;
+    justify-content:flex-end!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+  .portrait-arch{
+    width:100%!important;
+    max-width:145px!important;
+    height:195px!important;
+    margin:0!important;
+    border-radius:48% 48% 14px 14px!important;
+    box-shadow:0 12px 28px rgba(126,88,63,.10)!important;
+  }
+  .portrait-arch img{
+    object-position:center 13%!important;
+  }
+  .hero-luxe .lede{
+    grid-column:1 / -1!important;
+    grid-row:3!important;
+    margin:1.2rem 0 0!important;
+    max-width:35ch!important;
+    font-size:.9rem!important;
+    line-height:1.55!important;
+  }
+  .hero-luxe .hero-ctas{
+    grid-column:1 / -1!important;
+    grid-row:4!important;
+    margin:1.15rem 0 0!important;
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:.65rem!important;
+    max-width:none!important;
+  }
+  .hero-luxe .hero-ctas .btn{
+    width:100%!important;
+    min-height:46px!important;
+    justify-content:center!important;
+  }
+  .hero-copy>.scribble,
+  .side-note{
+    display:none!important;
+  }
+  .hero-leaf{
+    top:155px!important;
+    right:-42px!important;
+    width:105px!important;
+    opacity:.38!important;
+  }
+}
+
+@media (max-width:370px){
+  .hero-grid{
+    grid-template-columns:minmax(0,1fr) 116px!important;
+    column-gap:.55rem!important;
+  }
+  .hero-luxe h1{
+    font-size:1.86rem!important;
+  }
+  .portrait-arch{
+    max-width:116px!important;
+    height:174px!important;
+  }
+}
