@@ -680,3 +680,97 @@ p{ margin:0; }
   .card-grid,.service-grid{gap:.58rem;}
   .who-card,.service-card{padding:.95rem .78rem;}
 }
+
+/* ============================================================
+   Mobile redesign v3.1 — visibly different from desktop
+   ============================================================ */
+@media (max-width: 600px){
+  /* Header: compact, brand-led */
+  .site-header .container{min-height:62px;padding:.5rem .8rem;}
+  .brand img{width:42px;height:42px;}
+  .header-actions .btn,.header-phone{display:none;}
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center;}
+
+  /* Hero: no giant portrait. Copy dominates; portrait becomes a small profile card */
+  .hero{padding:1.25rem 0 1.8rem;background:linear-gradient(180deg,var(--ivory) 0%,rgba(232,221,210,.32) 100%);}
+  .hero .container{display:grid;grid-template-columns:1fr;gap:0;}
+  .hero-copy{order:1;}
+  .hero-kicker{font-size:.63rem;letter-spacing:.11em;margin-bottom:.8rem;}
+  .hero h1{font-size:clamp(1.9rem,8.2vw,2.38rem);line-height:1.04;max-width:13ch;letter-spacing:-.026em;}
+  .hero-copy p.lede{font-size:.93rem;line-height:1.58;margin-top:.9rem;max-width:34ch;}
+  .hero-ctas{margin-top:1.15rem;display:grid;grid-template-columns:1fr;gap:.55rem;}
+  .hero-ctas .btn{min-height:44px;width:100%;font-size:.79rem;padding:.72rem 1rem;}
+  .hero-visual{order:2;margin-top:1.05rem!important;width:100%;display:block!important;}
+  .hero-visual .photo-block{
+    width:100%!important;max-width:none!important;min-width:0!important;height:92px!important;aspect-ratio:auto!important;
+    border-radius:15px!important;display:grid;grid-template-columns:74px 1fr;align-items:center;overflow:hidden;
+    background:rgba(255,255,255,.72);border:1px solid var(--line);box-shadow:none!important;padding:.55rem .7rem;
+  }
+  .hero-visual .photo-block img{
+    position:relative!important;inset:auto!important;width:74px!important;height:74px!important;border-radius:12px;
+    object-fit:cover;object-position:center 24%;grid-column:1;
+  }
+  .hero-visual .photo-caption{
+    display:block!important;position:static!important;background:transparent!important;box-shadow:none!important;
+    margin:0 0 0 .8rem!important;padding:0!important;color:var(--charcoal)!important;grid-column:2;
+    font-size:.76rem;line-height:1.35;
+  }
+  .hero-visual .photo-caption strong{display:block;font-size:.9rem;margin-bottom:.16rem;}
+  .hero-visual .floating-badge{display:none!important;}
+
+  /* Qualification / trust block: even 2-column tiles, no half-populated row */
+  .credential-strip{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .credential-strip .container{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;padding:.7rem!important;gap:.55rem!important;}
+  .credential-mark,.credential-mark:nth-child(n){
+    grid-column:auto!important;min-height:74px!important;border:1px solid var(--line)!important;border-radius:14px!important;
+    background:var(--ivory);padding:.7rem .45rem!important;display:flex;align-items:center;justify-content:center;text-align:center;
+  }
+  .credential-mark:last-child{grid-column:1/-1!important;min-height:64px!important;}
+  .credential-wordmark{font-size:1.16rem!important;}
+  .xero-wordmark{font-size:1.28rem!important;}
+  .credential-mark strong{font-size:1.08rem!important;}
+  .credential-mark span:last-child{font-size:.64rem!important;margin-top:.2rem!important;}
+
+  /* Section rhythm is much tighter on phones */
+  .section{padding-block:2.75rem!important;}
+  .section-heading{gap:.58rem!important;}
+  .section-heading h2{font-size:clamp(1.55rem,7vw,1.95rem)!important;line-height:1.09!important;}
+  .section-heading .lede{font-size:.88rem!important;line-height:1.5!important;}
+
+  /* Who I help: true 2x2 dashboard */
+  .card-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.58rem!important;margin-top:1.35rem!important;}
+  .who-card{min-height:132px!important;padding:.9rem .8rem!important;border-radius:14px!important;}
+  .who-card .icon{width:32px!important;height:32px!important;margin-bottom:.55rem!important;}
+  .who-card h3{font-size:.95rem!important;margin-bottom:.25rem!important;}
+  .who-card p{font-size:.72rem!important;line-height:1.34!important;}
+
+  /* Services: compact app-like tiles, two across */
+  .service-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.58rem!important;margin-top:1.35rem!important;}
+  .service-card{min-height:108px!important;padding:.85rem .78rem!important;border-radius:14px!important;gap:.35rem!important;}
+  .service-card .icon{width:32px!important;height:32px!important;}
+  .service-card h3{font-size:.92rem!important;}
+  .service-card .arrow-link{font-size:.66rem!important;}
+
+  /* Broad support feature: same premium visual language, but no creator-first positioning */
+  .creator.broad-support{margin:.2rem .5rem!important;border-radius:18px!important;}
+  .creator.broad-support .container{padding:2.35rem 1rem!important;display:block!important;}
+  .creator.broad-support h2{font-size:1.72rem!important;line-height:1.08!important;max-width:14ch!important;}
+  .creator.broad-support .lede{font-size:.86rem!important;line-height:1.5!important;max-width:36ch!important;}
+  .creator.broad-support .creator-orb{display:none!important;}
+  .audience-row{display:grid!important;grid-template-columns:1fr 1fr;gap:.45rem!important;margin-top:1.15rem!important;}
+  .audience-row span{text-align:center;font-size:.68rem!important;padding:.48rem .5rem!important;}
+  .creator.broad-support .btn-primary{margin-top:1.25rem!important;}
+
+  /* Do not repeat Nicole's portrait on mobile */
+  .about .container>div:first-child{display:none!important;}
+  .about .container>div:last-child{width:100%!important;}
+
+  /* Proof points remain compact */
+  .stats-bar{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.58rem!important;margin-top:1.35rem!important;}
+  .stat-card{padding:1rem .65rem!important;min-height:92px!important;}
+
+  /* Footer reduced in height */
+  .footer-grid{grid-template-columns:1fr 1fr!important;gap:1.5rem 1rem!important;}
+  .footer-brand{grid-column:1/-1;}
+  .footer-bottom{margin-top:2rem!important;}
+}
