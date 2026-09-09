@@ -1034,3 +1034,86 @@ body:not(.home-v4) .calc-panel{border-color:rgba(174,129,97,.14);box-shadow:0 10
   .side-note{display:none;}
   .footer-links-home{gap:.8rem;}
 }
+
+
+/* ============================================================
+   v4.2 mobile polish — desktop layout intentionally unchanged
+   ============================================================ */
+.ui-icon,.cred-svg{width:1em;height:1em;display:block;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+.home-icon .ui-icon{width:2rem;height:2rem;margin:auto;}
+.service-tile span .ui-icon{width:1.7rem;height:1.7rem;}
+.cred-icon .cred-svg{width:1.65rem;height:1.65rem;margin:auto;}
+.uk-pin text{font-family:var(--sans);font-size:5.2px;font-weight:700;fill:currentColor;stroke:none;}
+
+/* Transparent logo blends naturally with the page background. */
+.brand-logo img,.footer-logo img{background:transparent!important;}
+
+@media (max-width:900px){
+  /* Hero photo: centre it rather than leaving a large empty strip beside Nicole. */
+  .hero-visual{display:flex!important;justify-content:center!important;align-items:center!important;padding-top:.55rem!important;}
+  .portrait-arch{width:min(270px,68vw)!important;height:300px!important;margin:0 auto!important;}
+  .portrait-arch img{object-position:center 14%!important;}
+  .hero-copy>.scribble{display:none!important;}
+
+  /* Credentials: clean 2-column grid, with UK-wide as a balanced full-width final tile. */
+  .luxe-credentials{padding-inline:.75rem;margin-top:.25rem;}
+  .credential-grid-home{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:.6rem!important;
+    padding:.65rem!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    border:0!important;
+    backdrop-filter:none!important;
+  }
+  .credential-home,
+  .credential-home:nth-child(n){
+    grid-column:auto!important;
+    min-height:82px!important;
+    padding:.7rem .45rem!important;
+    border:1px solid rgba(160,116,83,.14)!important;
+    border-radius:12px!important;
+    background:rgba(255,253,249,.9)!important;
+    box-shadow:0 7px 18px rgba(112,80,59,.055)!important;
+  }
+  .credential-home::after{display:none!important;}
+  .credential-home:last-child{grid-column:1/-1!important;min-height:70px!important;}
+  .credential-home strong{font-size:1.15rem!important;}
+  .credential-home span{font-size:.65rem!important;line-height:1.2!important;}
+  .xero-circle{width:38px!important;height:38px!important;font-size:.72rem!important;}
+  .acca-box{font-size:.66rem!important;padding:.48rem .4rem!important;}
+
+  /* The supplied branded desk image should always be visible in full on mobile. */
+  .modern-image{
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:590 / 349!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    background:#ead8c6!important;
+    overflow:hidden!important;
+  }
+  .modern-image img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+
+  /* Cleaner mobile logo integration. */
+  .brand-logo img,.footer-logo img{mix-blend-mode:multiply;}
+}
+
+@media (max-width:520px){
+  .hero-luxe{padding-bottom:1.4rem!important;}
+  .hero-grid{gap:.6rem!important;}
+  .portrait-arch{width:min(235px,66vw)!important;height:255px!important;}
+  .credential-grid-home{gap:.5rem!important;padding:.55rem!important;}
+  .credential-home,.credential-home:nth-child(n){min-height:76px!important;padding:.58rem .35rem!important;}
+  .credential-home:last-child{min-height:66px!important;}
+  .home-icon .ui-icon{width:1.65rem;height:1.65rem;}
+  .service-tile span .ui-icon{width:1.45rem;height:1.45rem;}
+  .footer-logo img{width:132px!important;height:64px!important;}
+}
